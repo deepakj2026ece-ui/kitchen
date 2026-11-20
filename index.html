@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Pantry & Meal Matcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1> Smart Kitchen Pantry & Meal Matcher</h1>
+      <p>Track ingredients, prevent spoilage, and find meals with what you already have.</p>
+    </header>
+
+    <main class="grid-layout">
+      <!-- Pantry Section -->
+      <section class="card">
+        <h2>My Pantry Inventory</h2>
+        <form id="pantry-form" class="form-group">
+          <input type="text" id="item-name" placeholder="Ingredient (e.g., Eggs, Spinach)" required />
+          <select id="item-urgency">
+            <option value="Fresh">Fresh (5+ days)</option>
+            <option value="Use Soon">Use Soon (2-4 days)</option>
+            <option value="Expiring Today">Expiring Today!</option>
+          </select>
+          <button type="submit">Add Item</button>
+        </form>
+
+        <ul id="pantry-list" class="item-list"></ul>
+      </section>
+
+      <!-- Meal Matcher Section -->
+      <section class="card">
+        <h2>Suggested Meals</h2>
+        <p class="subtitle">Recipes ranked by ingredients you already own:</p>
+        <div id="recipe-list" class="recipe-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
